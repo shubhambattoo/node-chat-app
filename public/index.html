@@ -12,17 +12,7 @@
 	<h1>Welcome to my node chat app</h1>
 
 	<script src="/socket.io/socket.io.js"></script>
-	<script>
-		const socket = io();
-
-		socket.on('connect', () => {
-			console.log('connected to server')
-		});
-
-		socket.on('disconnect', () => {
-			console.log('Connection was interrupted')
-		})
-	</script>
+	<script src="/js/index.js"></script>
 </body>
 
 </html>

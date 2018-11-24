@@ -14,14 +14,25 @@ app.use(express.static(publicPath));
 
 app.get('/', (req, res) => {
     res.render('index.html')
-})
+});
 
 io.on('connection', (socket) => {
     console.log('New user connected');
 
+    socket.emit('newEmail', {
+        from : 'mike@example.com',
+        text : 'Whaddup nefew?',
+        time : '10 bje'
+    });
+
+    socket.on('createEmail', (newEmail) => {
+        console.log('create mail');
+        console.log(newEmail);
+    });
+
     socket.on('disconnect', () => {
         console.log('user was disconnected')
-    })
+    });
 });
 
 server.listen(port, () => {
