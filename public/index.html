@@ -11,7 +11,20 @@
 <body>
 	<h1>Welcome to my node chat app</h1>
 
+	<ol id="messages"></ol>
+
+	<form id="message-form">
+		<div>
+			<label for="message">Message</label>
+			<input type="text" name="message" id="message">
+		</div>
+		<div>
+			<button type="submit">Send</button>
+		</div>
+	</form>
+
 	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="/js/index.js"></script>
 </body>
 

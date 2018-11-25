@@ -3,6 +3,7 @@ const expect = require('expect');
 const {generateMessage} = require('./message');
 
 describe('generateMessage', () => {
+
 	it('should generate correct message object', () => {
 		const from = 'Mike';
 		const text = 'Hello world';
@@ -10,6 +11,5 @@ describe('generateMessage', () => {
 
 		expect(message.createdAt).toBeA('number');
 		expect(message).toInclude({from,text});
-
 	})
 })
