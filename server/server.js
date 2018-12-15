@@ -16,10 +16,6 @@ const io = socketIO(server)
 
 app.use(express.static(publicPath));
 
-app.get('/', (req, res) => {
-  res.render('index.html')
-});
-
 io.on('connection', (socket) => {
   console.log('New user connected');
 
