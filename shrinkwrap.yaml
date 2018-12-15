@@ -1,5 +1,6 @@
 dependencies:
   express: 4.16.4
+  moment: 2.23.0
   socket.io: 2.1.1
 devDependencies:
   expect: 1.20.2
@@ -1419,6 +1420,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-2IUgKDhc3J7Uug+FxMXuqIyYzH7gJjXECKe/w43IGgQHTSj3InJi+yAA7T24L9bQMRKiUEHxEX37G5JpVUGLcQ==
+  /moment/2.23.0:
+    dev: false
+    resolution:
+      integrity: sha512-3IE39bHVqFbWWaPOMHZF98Q9c3LDKGTmypMiTM2QygGXXElkFWIH7GxfmlwmY2vwa+wmNsoYZmG2iusf1ZjJoA==
   /ms/2.0.0:
     resolution:
       integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
@@ -2282,5 +2287,6 @@ specifiers:
   expect: ^1.20.2
   express: ^4.16.4
   mocha: ^5.2.0
+  moment: ^2.23.0
   nodemon: ^1.18.6
   socket.io: ^2.1.1
