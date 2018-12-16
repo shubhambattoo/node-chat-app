@@ -5,6 +5,12 @@ class Users {
 
   addUser (id, name, room) {
     const user = {id, name, room};
+    const cUser = this.getUserWName(user.name);
+    if (cUser) {
+      if (cUser.room === user.room) {
+        return false;
+      }
+    }
     this.users.push(user);
     return user;
   }
@@ -24,6 +30,11 @@ class Users {
 
   getUser (id) {
     const users = this.users.filter(user => user.id === id);
+    return users[0];
+  }
+
+  getUserWName (name) {
+    const users = this.users.filter(user => user.name === name);
     return users[0];
   }
 
