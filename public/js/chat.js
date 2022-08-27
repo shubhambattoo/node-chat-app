@@ -34,7 +34,7 @@ socket.on('disconnect', () => {
 });
 
 socket.on('updateUserList',function (users) {
-  console.log('Users list', users);
+  // console.log('Users list', users);
   const ol = $('<ol></ol>');
   users.forEach((user) => {
     ol.append($('<li></li>').text(user))
@@ -88,7 +88,7 @@ buttonSelector.on('click', function () {
   buttonSelector.attr('disabled',true).text('Sending Location...')
 
   navigator.geolocation.getCurrentPosition(function(position) {
-    console.log(position);
+    // console.log(position);
     buttonSelector.attr('disabled',false).text('Send Location')
     socket.emit('createLocationMessage', {
       latitude : position.coords.latitude,
